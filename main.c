@@ -45,7 +45,7 @@ int main() {
     // Llenar arreglo aleatorio
     srand(time(NULL));
     for (size_t i = 0; i < n; i++)
-        original[i] = rand() % 10000;
+        original[i] = rand() % 1000000;
 
     printf("\nArreglo original:\n");
     imprimirArreglo(original, n);
