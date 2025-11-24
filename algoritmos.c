@@ -3,9 +3,6 @@
 #include <string.h>
 #include <stdio.h>
 
-/*---------------------------------------------------
-  UTILIDAD DE PROGRESO
----------------------------------------------------*/
 static void _prog_emit(progress_cb_t cb, void *ud, double p) {
     if (cb) {
         if (p < 0.0) p = 0.0;
@@ -139,7 +136,7 @@ void sort_shellsort(int *a, size_t n, progress_cb_t cb, void *ud){
 }
 
 /*---------------------------------------------------
-  RADIX SORT COMO EN TU FOTO
+  RADIX SORT 
 ---------------------------------------------------*/
 
 static int encontrarMaximo(int arr[], int n) {
