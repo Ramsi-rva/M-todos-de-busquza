@@ -4,21 +4,8 @@
 #include <string.h>
 #include "algoritmos.h"
 
-// ----------------------------------------------------------
-// Callback VACÍO porque no usaremos barras de progreso aquí
-// ----------------------------------------------------------
 void progreso(double p, void *ud) {
-    // Se podría imprimir avance, pero lo dejamos vacío
-}
-
-// ----------------------------------------------------------
-// Función para imprimir un arreglo
-// ----------------------------------------------------------
-void imprimirArreglo(int *a, size_t n) {
-    for (size_t i = 0; i < n; i++) {
-        printf("%d ", a[i]);
-    }
-    printf("\n");
+    // Se podría imprimir avance, pero lo deje asi profe
 }
 
 // ----------------------------------------------------------
@@ -47,9 +34,6 @@ int main() {
     for (size_t i = 0; i < n; i++)
         original[i] = rand() % 1000000;
 
-    printf("\nArreglo original:\n");
-    imprimirArreglo(original, n);
-
     // Crear copias
     int *A = malloc(n * sizeof(int));
     int *B = malloc(n * sizeof(int));
@@ -68,12 +52,6 @@ int main() {
     double t_quick   = medir_tiempo(sort_quicksort, B, n);
     double t_shell   = medir_tiempo(sort_shellsort, C, n);
     double t_radix   = medir_tiempo(sort_radix, D, n);
-
-    // ------------------------------
-    // TABLA ORDENADA (Radix)
-    // ------------------------------
-    printf("\nTabla ordenada (RadixSort):\n");
-    imprimirArreglo(D, n);
 
     // ------------------------------
     // TABLA COMPARATIVA
